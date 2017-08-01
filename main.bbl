@@ -24,6 +24,22 @@ Hansen, N., Auger, A., Finck, S., Ros, R.: Real-parameter black-box
   optimization benchmarking 2010: Experimental setup. Ph.D. thesis, INRIA
   (2010)
 
+\bibitem{holtschulte2013benchmarking}
+Holtschulte, N.J., Moses, M.: Benchmarking cellular genetic algorithms on the
+  bbob noiseless testbed. In: Proceedings of the 15th annual conference
+  companion on Genetic and evolutionary computation. pp. 1201--1208. ACM (2013)
+
+\bibitem{ijse5762}
+Huda, A.M., Santosa, B.: Subsurface structure in japan based on p and s waves
+  travel time analysis using genetic algorithm in japan seismological network.
+  International Journal of Science and Engineering  6(1) (2014),
+  \url{http://www.ejournal.undip.ac.id/index.php/ijse/article/view/5762}
+
+\bibitem{jafarian2010empirical}
+Jafarian, Y., Kermani, E., Baziar, M.H.: Empirical predictive model for the v
+  max/a max ratio of strong ground motions using genetic programming. Computers
+  \& Geosciences  36(12),  1523--1531 (2010)
+
 \bibitem{Kennett1992}
 Kennet, B.L.N., Sambridge, M.S.: Earthquake location — genetic algorithms for
   teleseisms. Physics of the Earth and Planetary Interiors  75(1--3),  103--110
@@ -41,6 +57,12 @@ Nicknam, A., Abbasnia, R., Eslamian, Y., Bozorgnasab, M., Mosabbeb, E.A.:
   green's function method, based on an evolutionary approach. J. Earth Syst.
   Sci.  119(3),  383--396 (June 2010)
 
+\bibitem{nicolau2009application}
+Nicolau, M.: Application of a simple binary genetic algorithm to a noiseless
+  testbed benchmark. In: Proceedings of the 11th Annual Conference Companion on
+  Genetic and Evolutionary Computation Conference: Late Breaking Papers. pp.
+  2473--2478. ACM (2009)
+
 \bibitem{Ramos2011}
 Ramos, J.I.E., V\'azques, R.A.: Locating seismic-sense stations through genetic
   algorithms. In: Proceedings of the GECCO'11. pp. 941--948. ACM, Dublin,
@@ -54,6 +76,21 @@ Sadat, N., Zakeri, S., Pashazadeh, S.: Application of neural network based on
 \bibitem{Nature1999}
 Saegusa, A.: Japan tries to understand quakes, not predict them. Nature 397,
   284 (1999)
+
+\bibitem{saeidian2016evaluation}
+Saeidian, B., Mesgari, M.S., Ghodousi, M.: Evaluation and comparison of genetic
+  algorithm and bees algorithm for location-allocation of earthquake relief
+  centers. International Journal of Disaster Risk Reduction  (2016)
+
+\bibitem{sawyerr2015benchmarking}
+Sawyerr, B.A., Adewumi, A.O., Ali, M.M.: Benchmarking rcgau on the noiseless
+  bbob testbed. The Scientific World Journal  2015 (2015)
+
+\bibitem{sawyerr2013benchmarking}
+Sawyerr, B.A., Adewumi, A.O., Ali, M.M.: Benchmarking projection-based real
+  coded genetic algorithm on bbob-2013 noiseless function testbed. In:
+  Proceedings of the 15th annual conference companion on Genetic and
+  evolutionary computation. pp. 1193--1200. ACM (2013)
 
 \bibitem{zechar2010evaluating}
 Zechar, J.D.: Evaluating earthquake predictions and earthquake forecasts: A
