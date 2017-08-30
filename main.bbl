@@ -51,6 +51,12 @@ Kerh, T., Gunaratnam, D., Chan, Y.: Neural computing with genetic algorithm in
   Neural Comput. Appl.  19(4),  521--529 (Jun 2010),
   \url{http://dx.doi.org/10.1007/s00521-009-0301-z}
 
+\bibitem{Kerh2015}
+Kerh, T., Su, Y.H., Mosallam, A.: Incorporating global search capability of a
+  genetic algorithm into neural computing to model seismic records and soil
+  test data. Neural Computing and Applications pp. 1--12 (2015),
+  \url{http://dx.doi.org/10.1007/s00521-015-2077-7}
+
 \bibitem{Nicknam2010}
 Nicknam, A., Abbasnia, R., Eslamian, Y., Bozorgnasab, M., Mosabbeb, E.A.:
   Source parameters estimation of 2003 bam earthquake mw 6.5 using empirical
