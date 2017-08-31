@@ -1,0 +1,15 @@
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+*.blg
+*.bbl
+
+*~
+.Rhistory
+.DS_Store
+TODO.html
+main.synctex.gz
