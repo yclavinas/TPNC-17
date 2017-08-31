@@ -2,45 +2,58 @@ This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: splncs03.bst
-Database file #1: bib.bib
-You've used 21 entries,
+Database file #1: tournament.bib
+Repeated entry---line 995 of file tournament.bib
+ : @inproceedings{nicolau2009application
+ :                                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1036 of file tournament.bib
+ : @article{sawyerr2015benchmarking
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1194 of file tournament.bib
+ : @inproceedings{holtschulte2013benchmarking
+ :                                           ,
+I'm skipping whatever remains of this entry
+You've used 22 entries,
             2785 wiz_defined-function locations,
-            729 strings with 9236 characters,
-and the built_in function-call counts, 12239 in all, are:
-= -- 1083
+            720 strings with 8704 characters,
+and the built_in function-call counts, 13087 in all, are:
+= -- 1176
 > -- 314
-< -- 24
-+ -- 129
+< -- 34
++ -- 137
 - -- 108
-* -- 760
-:= -- 1547
-add.period$ -- 35
-call.type$ -- 21
-change.case$ -- 131
+* -- 794
+:= -- 1621
+add.period$ -- 34
+call.type$ -- 22
+change.case$ -- 132
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 1097
-empty$ -- 1102
-format.name$ -- 127
-if$ -- 2717
+cite$ -- 22
+duplicate$ -- 1158
+empty$ -- 1153
+format.name$ -- 126
+if$ -- 2916
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 205
-newline$ -- 68
+int.to.str$ -- 22
+missing$ -- 219
+newline$ -- 71
 num.names$ -- 44
-pop$ -- 360
+pop$ -- 355
 preamble$ -- 1
-purify$ -- 95
+purify$ -- 97
 quote$ -- 0
-skip$ -- 353
+skip$ -- 424
 stack$ -- 0
-substring$ -- 807
-swap$ -- 607
-text.length$ -- 24
+substring$ -- 904
+swap$ -- 702
+text.length$ -- 34
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 84
+type$ -- 88
 warning$ -- 0
-while$ -- 107
-width$ -- 23
-write$ -- 224
+while$ -- 126
+width$ -- 24
+write$ -- 229
+(There were 3 error messages)

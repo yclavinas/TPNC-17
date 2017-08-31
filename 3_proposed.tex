@@ -1,27 +1,26 @@
 \section{GA-BBOB}\label{sec:proposed:ga-bbob}
 
-In the work, we propose the GA-BBOB, which is a real-valued Genetic Algorithm to explore the search space of the 24 noise free 40-D BBOB benchmark functionsel. That is mainly true for all evolutionary operators. 
+In the work, we propose the GA-BBOB, which is a real-valued Genetic Algorithm to explore the search space of the 24 noise free N dimension BBOB benchmark functions~\cite{hansen2010real}.
 
 \subsubsection*{Genome Representation and Evolutionary Tools.}
-Each individual is represented as real valued array, where each element is one input to a 40-D noise free benchmark BBOB function. Therefore, each individual of the GA-BBOB has size of 40 real value elements. Each element's values has values between the interval [-5, 5], once those function are limited by these values. It uses the XX crossover, elitism and polynomial bounded mutation are used as evolutionary operators. The relevant parameters were set as Elite Size = 1, Crossover chance = 0.9, Mutation Chance = 0.1. For the Polynomial Bounded parameters: eta = 1, low = -5, up = 5.
+Each individual is represented as real valued array, where each element is one input to a N dimension noise free benchmark BBOB function. Therefore, each individual of the GA-BBOB has size of N real value elements. Each individual's values is set to the be into the interval [-5, 5], once those function are limited by these values. It uses the Uniform crossover, elitism and Gaussian mutation are used as evolutionary operators. The relevant parameters were set as Elite Size = 1, Crossover chance = 0.9, Mutation Chance = 0.1. For the Gaussian mutation, these parameters were chosen: mean = 0, Standard deviation = 1, and independent probability for each attribute to be mutated = 0.1.
 
 
 \subsubsection*{Fitness Function.}
-The fitness function considered are the 40-D noise free benchmark BBOB function. For more information, please refer to the work of Hansen et al.~\cite{hansen2010real}.
+The fitness function considered are the N dimensions noise free benchmark BBOB function. For more information, please refer to the work of Hansen et al.~\cite{hansen2010real}.
 Consequently, the GA-BBOB has 24 different fitness functions. 
 
 
-%TODO:
-%add here the PRCGA and the restart and number of eval stuff
-\subsubsection*{Minor Adaptations.}
-%check if this is the most current work on ga and bbob
+\subsubsection*{Implementation Details.}
 Chuang et al.~\cite{chuang2012black}, proposed a Genetic Algorithm specific to run on the noise free BBOB benchmark functions. Some good practices presented in this work were incorporated to the GA-BBOB. These practice are the concept of ``restart strategy'' and the concept of ``alleviate stagnation''.
 
 The restart strategy concept is defined by Chuang et al. as: ``For each restart, the initial population  is uniformly and randomly sampled within the search space. Whenever the restart condition is met, the algorithm will be reinitialized without using any information about the last test run. This process is iterated until the stopping criteria are met, i.e., maximum number of function evaluations has been reached, or the function value is less than the target precision.''
 
-The restart condition used fo rthe  GA-BBOB is that the standard deviation of the current population is smaller that $10^{-12}$. When the restart condition is contemplated the algorithm population is reinitialized randomly, as in the first initialization. In the GA-BBOB, we consider information about the last run, by utilizing the Elitism strategy on the best individual prior to the restart. The maximum number of function evaluations chosen is ($10^5$) and the target precision chosen is ($10^{-8}$), values compatible with the ones in the previous work.
+The restart condition used in the GA-BBOB is value of the standard deviation of the current population. If it is smaller that $10^{-12}$, then the restart condition is triggered. Therefore, when it is contemplated the algorithm population is reinitialized randomly, as it is in the first initialization. 
 
-\subsection{Genetic Algorithms and Benchmarks Functions}
+In the GA-BBOB, we consider information about the last run, by utilizing the Elitism strategy on the best individual prior to the restart. The maximum number of function evaluations chosen is ($4 * 10^5$) and the target precision chosen is ($10^{-8}$), values compatible with the ones in the previous work.
+
+\subsection{Genetic Algorithms and Benchmarks Functions.}
 
 IN 2009, Nicolau~\cite{nicolau2009application} proposed the first Genetic Algorithm on the BBOB-2009 noiseless testbed. It was a simple binary Genetic Algorithm and its results showed good results on separable functions, but poor performance is achieved on the other functions.
 
