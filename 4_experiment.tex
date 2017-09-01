@@ -1,9 +1,18 @@
-
-
 \section{Experiment Design}
+
+In this section we describe how the experiments were conducted.
+
+
 \label{sec:experiment}
 
+\subsection{(40, 20, 10) Dimensions Experiments}
+
+To analyze the impact of the tournament size into the GA-BBOB in therms of quality of result, the following experiments were performed. First we analyse different values for the tournament size applied to the BBOB benchmark functions with 40 dimensions. Then, we repeat the same experiments, but with 20 and 10 dimensions.  The tournament sizes were select, arbitarily, from 2 to 25.
 
 
-\subsection{Experiment Design}
+\subsection{Experiment Design - Fixed tournament size}
+
+We also wanted to explore what would be the impact of varying the values of the tournament size \textit{during} the execution.
+Here we want to explore what is the impact of shifting the tournament size during the execution of the GA-BBOB. We start with the tournament size equal to 2, as many of the work cited on section~\ref{sec:background:tournament_size}. Then when half of the evaluations are completed, the tournament size is changed to another value, chosen from 2 to 25. 
+
 
