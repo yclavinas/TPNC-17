@@ -1,7 +1,8 @@
 %TODO: include the ref to bbob functions
 \section{Selection Scheme}\label{sec:background:Selection Scheme} 
 
-The selection scheme is intended to improve the avarage quality of the Genetic Algorithms (GA) by giving individuals of higher quality a higher probabilty of composing the next generation~\cite{blickle1995mathematical}. It is also an important factor to the convergence quality of the GA and the goal of any selection scheme is to favor the proliferation of good individuals in the population (GA)~\cite{harik1999gambler}. Goldberg and Deb~\cite{goldberg1991comparative} stated that there exists several selection schemes commonly used in GA, such as the rank selection, the roulette-whell selection and the tournament selection. 
+The selection scheme is intended to improve the avarage quality of the Genetic Algorithms (GA) by giving individuals of higher quality a higher probabilty of composing the next generation~\cite{blickle1995mathematical}. It is also an important factor to the convergence quality of the GA and the goal of any selection scheme is to favor the proliferation of good individuals in the population (GA)~\cite{harik1999gambler}. Goldberg and Deb~\cite{goldberg1991comparative} stated that there exists several selection schemes commonly used in GA, such as the rank selection, the roulette-whell selection and the tournament selection. The also declare that the complexity of the tournament size is o(n) ans say ``tournaments are often held
+between pairs of individuals (tournament size s = 2), although larger tournaments can be used and may be analyzed. ''. 
 
 There are some examples of the application of these selection schemes and the BBOB functions. Holtschulte and Moses, in~\cite{holtschulte2013benchmarking} used rank selection in their GA implementation and applied it to the BBOB functions. They stated that rank selection should be replaced by an elitism selection scheme to improve the performance of their GA implementation by spreading of high quality solutions through the population. 
 
@@ -26,7 +27,7 @@ The convergence rate of a GA is largely determined by the selection pressure, wi
 
 In 1991, Goldberg~\cite{goldberg1991real}, analysed the tournament selection with size 2 in a real-coded GA. They recognized, empirically, that after some time only individuals with relatively high function values will be represented in the population. Also it compares the importance of mutation operators and the tournament selection operator and states that ``the addition of some small amount of creeping mutation or other genetic operators should not mat erially affect these results''.
 
-Goldberg et al.~\cite{goldberg1993toward}, in 1993, implemented a binary used the tournament selection as a convenience way to control selection pressure. They wanted to study the GA aspected of mixing building block.
+Goldberg et al.~\cite{goldberg1993toward}, in 1993, implemented a binary GA using the tournament selection as a conveniente way to control selection pressure. They wanted to study the theory aspects of the GA focusing in the mixing building block.
 
 Agrawal~\cite{agrawal1995simulated}, in 1995, implemented real-coded GA with tournament selection with size 2. Their goal was to compare the results of the simulated binary crossover (SBX) with the binary single-point crossover and with the blend crossover. They concluded that the SBX  has search power similar to the single-point crossover and the SBX performs better in difficult test functions than the blend crossover. 
 
