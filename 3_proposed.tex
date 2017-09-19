@@ -1,6 +1,6 @@
 \section{GA-BBOB}\label{sec:proposed:ga-bbob}
 
-In the work, we propose the GA-BBOB, which is a real-valued Genetic Algorithm to explore the search space of the 24 noise free N dimension BBOB benchmark functions~\cite{hansen2010real}.
+In the work, we implemented the GA-BBOB, which is a real-valued Genetic Algorithm to explore the search space of the 24 noise free N dimension BBOB benchmark functions~\cite{hansen2010real}.
 
 \subsubsection*{Genome Representation and Evolutionary Tools.}
 Each individual is represented as real valued array, where each element is one input to a N dimension noise free benchmark BBOB function. Therefore, each individual of the GA-BBOB has size of N real value elements. Each individual's values is set to the be into the interval [-5, 5], once those function are limited by these values. It uses the Uniform crossover, elitism and Gaussian mutation are used as evolutionary operators. The relevant parameters were set as Elite Size = 1, Crossover chance = 0.9, Mutation Chance = 0.1. For the Gaussian mutation, these parameters were chosen: mean = 0, Standard deviation = 1, and independent probability for each attribute to be mutated = 0.1.
