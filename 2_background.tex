@@ -9,6 +9,16 @@ The selection scheme is intended to improve the avarage quality of the GA by giv
 %TODO: its possible to better show the ideas here
 Goldberg and Deb~\cite{goldberg1991comparative} stated that there exists several selection schemes commonly used in GA, such as the rank selection, the roulette-whell selection and the tournament selection. They also declare that the complexity of the tournament size is o(n) and say that tournaments are often held with tournament size s = 2, although larger tournament sizes may be analyzed.
 
+\subsection{The Tournament Selection Procedure}\label{sec:background:tournament_selection} 
+
+To be able to understand the impact of the Tournament Selection and to be capable to analyse this selection scheme we not only need to describe how it is conducted, but also we need to study applications that used the Tournament Selection. Here we describe how it operates, and we show the studies next.
+
+Tournament selection is conducted as follows: choose some number, k, of individuals randomly from the population and copy the best individual from this group into an intermediate population, and repeat N times. 
+
+%TODO: its possible to better show the ideas here
+Often tournaments are held only between two individuals (binary tournament) but a generalization is possible to an arbritrary group size k called tournament size~\cite{blickle1995mathematical, goldberg1991comparative}. A tournament selection, as any selection mechanism in GA, simply favors the selection of better individuals of a population to influence the next generation. 
+
+
 \subsection{Selection Schemes and BBOB functions}
 
 There are some examples of applications that applied these selection schemes with the BBOB functions. Next we show a few of this examples.
@@ -23,17 +33,7 @@ Therefore, in this we work we chose to analyse the tournament selection behavior
 
 
 
-\subsection{The Tournament Selection Procedure}\label{sec:background:tournament_selection} 
-
-To be able to understand the impact of the Tournament Selection and to be capable to analyse this selection scheme we not only need to describe how it is conducted, but also we need to study applications that used the Tournament Selection. Here we describe how it operates, and we show the studies next.
-
-Tournament selection is conducted as follows: choose some number, k, of individuals randomly from the population and copy the best individual from this group into an intermediate population, and repeat N times. 
-
-%TODO: its possible to better show the ideas here
-Often tournaments are held only between two individuals (binary tournament) but a generalization is possible to an arbritrary group size k called tournament size~\cite{blickle1995mathematical, goldberg1991comparative}. A tournament selection, as any selection mechanism in GA, simply favors the selection of better individuals of a population to influence the next generation. 
-
-
-\subsubsection{Tournament Pressure}\label{sec:background:tournament_pressure} 
+\subsection{Tournament Pressure}\label{sec:background:tournament_pressure} 
 Muhlenbein et al., in~\cite{muhlenbein1993predictive}, introduced the concept of selection intensity, which is to measure the pressure of selection schemes. The selection intensity is defined as the expected average fitness of the population after selection. 
 
 The selection pressure of tournament selection is expected to increse as the tournament size, k, becomes larger. In other words, the higher the selection pressure, the more the better individuals influences the next generation~\cite{miller1995genetic}.  
@@ -42,7 +42,7 @@ With higher tournament sizes, the selection pressure rises resulting in higher c
 
 Then, we understand that it is important to explore the Tournament size, hence it is possible that its value would change respectively to the domain of the application that used Tournament Selection.
 
-\subsection{Tournament Size and its Application}\label{sec:background:tournament_size} 
+\subsection{Tournament Size in the Literature}\label{sec:background:tournament_size} 
 
 In 1991, Goldberg~\cite{goldberg1991real}, analysed the tournament selection with size 2 in a real-coded GA. They recognized, empirically, that after some time only individuals with relatively high function values will be represented in the population. Also it compares the importance of mutation operators and the tournament selection operator and states that ``the addition of some small amount of creeping mutation or other genetic operators should not mat erially affect these results''.
 
@@ -71,9 +71,7 @@ Also in 2009, Nicolau~\cite{nicolau2009application} implemented a binary GA to s
 
 Sawyerr et al.~\cite{sawyerr2015benchmarking}, in 2015, proposed the RCGAu, hybrid real-coded genetic algorithm with ``uniform random directiom'' search mechanism. They used tournament selection with size 3 to explore the suite of noiseless black-box optimization testbed and the results showed great performance in some functions as $f_7$ and $f_{21}$.
 
-\subsubsection{Popular Tournament Size}\label{sec:background:pop_tournament_size} 
-
-From the works showed here, it is possible to understand that there is a preference to small values for the tournament size, as 2 or 3. We could trace back to 1991, and we found out that even from that time is has been a popular choice. However, we must highlight that these values are chosen arbirtrarily and has small scientific background. For instance, in 2009, Nicolau used a more pragmatic approach and set an empirical equation to his binary GA. 
+From the works showed here, it is possible to understand that there is a preference to small values for the tournament size. We traced back to 1991, and we found out that it has been a popular choice ever since. However, we must highlight that these values are chosen arbirtrarily and that Nicolau used a more pragmatic approach and set an empirical equation to his binary GA. 
 
 
 
