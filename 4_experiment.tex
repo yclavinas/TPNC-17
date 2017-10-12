@@ -5,11 +5,37 @@ In this section we describe how the experiments were conducted.
 
 \subsection{GA-BBOB}\label{sec:proposed:ga-bbob}
 
-In the work, we implemented the GA-BBOB, which is a real-valued Genetic Algorithm to explore the search space of the 24 noise free N dimension BBOB benchmark functions~\cite{hansen2010real}.
+In the work, we implemented the GA-BBOB a simple GA implementation. The GA-BBOB is a real-valued Genetic Algorithm to explore the search space of the 24 noise free N dimension BBOB benchmark functions~\cite{hansen2010real}.
 
 \subsubsection*{Genome Representation and Evolutionary Tools.}
-Each individual is represented as real valued array, where each element is one input to a N dimension noise free benchmark BBOB function. Therefore, each individual of the GA-BBOB has size of N real value elements. Each individual's values is set to the be into the interval [-5, 5], once those function are limited by these values. It uses the Uniform crossover, elitism and Gaussian mutation are used as evolutionary operators. The relevant parameters were set as Elite Size = 1, Crossover chance = 0.9, Mutation Chance = 0.1. For the Gaussian mutation, these parameters were chosen: mean = 0, Standard deviation = 1, and independent probability for each attribute to be mutated = 0.1.
+Each individual is represented as real valued array, where each element is one input to a N dimension noise free benchmark BBOB function. Therefore, each individual of the GA-BBOB has size of N real value elements. Each individual's values is set to the be into the interval [-4, 4], once those function are limited by these values. It uses the Uniform crossover, elitism and Gaussian mutation are used as evolutionary operators. The relevant parameters were set as it is possible to see in the following Table~\ref{relevant_par} and Table~\ref{gaussian_par}.
 
+\begin{table}[!ht]\label{relevant_par}
+	\centering
+	\caption{GA-BBOB Relevant Parameters}
+	\vspace{2mm}
+	\begin{tabular}{|l|l|}
+	\hline
+	Number of Generations & 800 \\ \hline
+	Population Size &  500		\\ \hline
+	Crossover chance 	& 0.9	\\ \hline
+	Mutation Chance 	& 0.1	\\ \hline		
+	Elitism size 		& 1		\\ \hline		
+	\end{tabular}
+\end{table}
+
+%
+\begin{table}[!ht]\label{gaussian_par}
+	\centering
+	\caption{Gaussian Mutation parameters}
+	\vspace{2mm}
+	\begin{tabular}{|l|l|}
+	\hline
+		Mean & 0 \\ \hline		
+		Standard Deviation & 1 \\ \hline		
+		Ind. Prob. Attribute to be Mutated &  0.1 \\ \hline		
+	\end{tabular}
+\end{table}
 
 \subsubsection*{Fitness Function.}
 The fitness function considered are the N dimensions noise free benchmark BBOB function. For more information, please refer to the work of Hansen et al.~\cite{hansen2010real}.
@@ -33,7 +59,7 @@ In 2012, Chuang et al.~\cite{chuang2012black} presented the ``DBRCGA'', a real c
 
 In 2013, Holtschulte et al.~\cite{holtschulte2013benchmarking} evaluated two Genetic Algorithm on the BBOB-2013 noiseless testbed, but none had results competitive with the best 2009 optimization algorithm. Their results highlight the importance of carefully chosen genetic operators.
 
-Sawyerr et al found simliar results to the one achieved by Chuang et al. on their works in 2013~\cite{sawyerr2013benchmarking} and in 2015~\cite{sawyerr2015benchmarking}. In 2013, they proposed the ``PRCGA'', or projection-based real-coded genetic algorithm. It incorporates exploratory search mecanism based on vector projection. In 2015, they have studied a hybrid application of the Genetic Algorithm (GA) with the \textit{uniform random direction} search, named ``RCGAu''. BOth the PRCGA and the RCGAu were tested on the BBOB-2013 noiseless testbed. They stated that both of them had difficulties to achieve solutions with the desired accuracy for high conditioning and multimodal functions, though they were able to solve the benchmark functions.  Sawyerr et al concluded that the RCGAu has excelled in solving the $f_1$, $f_2$, $f_3$, $f_7$ and $f_{21}$, tough for the other functions it achieved avarage results. They also state that real value GA do not efficiently solve highly conditioned problems and studies have currently been carried out to find out why~\cite{sawyerr2015benchmarking}.
+Sawyerr et al found simliar results to the one achieved by Chuang et al. on their works in 2013~\cite{sawyerr2013benchmarking} and in 2015~\cite{sawyerr2015benchmarking}. In 2013, they proposed the ``PRCGA'', or projection-based real-coded genetic algorithm. It incorporates exploratory search mecanism based on vector projection. In 2015, they have studied a hybrid application of the Genetic Algorithm (GA) with the \textit{uniform random direction} search, named ``RCGAu''. Both the PRCGA and the RCGAu were tested on the BBOB-2013 noiseless testbed. They stated that both of them had difficulties to achieve solutions with the desired accuracy for high conditioning and multimodal functions, though they were able to solve the benchmark functions.  Sawyerr et al concluded that the RCGAu has excelled in solving the $f_1$, $f_2$, $f_3$, $f_7$ and $f_{21}$, tough for the other functions it achieved avarage results. They also state that real value GA do not efficiently solve highly conditioned problems and studies have currently been carried out to find out why~\cite{sawyerr2015benchmarking}.
 
 
 
@@ -55,6 +81,6 @@ To analyze the impact of the tournament size into the GA-BBOB in therms of quali
 
 \subsubsection*{Fluctuating tournament size}
 
-To analyze the impact of fluctuating the tournament size \textit{during} the execution into the GA-BBOB in therms of quality of result, the following experiments were performed. We start with the tournament size equal to 2, as many of the work cited on section~\ref{sec:background:tournament_size}. Then when half of the evaluations are completed, the tournament size is changed to another value, chosen from 2 to 25. These values were applied to the BBOB benchmark functions with 10, 20 and 40 dimensions For each combination of BBOB benchmark functions, dimensions, and fluctuating tournament size we performed 40 repetions.
+To analyze the impact of fluctuating the tournament size \textit{during} the execution og the GA-BBOB in therms of quality of result, the following experiments were performed. We start with the tournament size equal to 2, as many of the work cited on section~\ref{sec:background:tournament_size}. Then when half of the evaluations are completed, the tournament size is changed to another value, chosen from 2 to 25. These values were applied to the BBOB benchmark functions with 10, 20 and 40 dimensions For each combination of BBOB benchmark functions, dimensions, and fluctuating tournament size we performed 40 repetions.
 
 

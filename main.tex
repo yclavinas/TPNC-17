@@ -1,53 +1,119 @@
-%\documentclass{llncs}
-\documentclass{article}
-\usepackage[pdftex]{graphicx}
-\usepackage{amsmath}
-
-\usepackage[T1]{fontenc}
-\usepackage{indentfirst}
-%\usepackage{natbib}
-\usepackage{xcolor,graphicx,url}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
+%==========================================================================
+%Template File for Evolutionary Computation Symposium
+%==========================================================================
+\documentclass[a4paper,11pt,twocolumn]{jarticle}
+\usepackage{evocomp}
+\usepackage{fancyhdr}
+\usepackage[]{algorithm2e}
 \usepackage{graphicx}
-\usepackage{url}
-\usepackage{algorithm}
-\usepackage{algorithmic}
-\usepackage{graphicx}
-\usepackage{lipsum}
+\usepackage{float}
 
-\usepackage{caption}
-\usepackage{subcaption}
-\captionsetup{compatibility=false}
+\pagestyle{empty}
+
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
 
 \begin{document}
+\LinesNumbered
+\RestyleAlgo{boxruled}
+\twocolumn[%
+\begin{center}
 
-\title{Verifying the Impact of the Tournament Selection on Genetic Algorithms}
+%---------------------------------------------------------------------------
+% ヘッダ   
+%---------------------------------------------------------------------------
+\beginheader
 
-\author{
-  Yuri Lavinas\inst{1} \and
-%  Xiucai Ye\inst{2} \and
-  Marcelo Ladeira\inst{3} \and \\ 
-%  Tetsuya Sakurai\inst{4} \and
-  Claus Aranha\inst{5}
+
+%---------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------
+\jtitle%
+{Verifying the Impact of the Tournament Selection on Genetic Algorithms}
+%%%
+%もしサブタイトルが必要な場合には，
+%\2jtitle%
+%{タイトル}{サブタイトル}
+%を使用
+%%%
+
+%---------------------------------------------------------------------------
+% 著者名      書式：\author{日本語著者名}{英語著者名}
+%---------------------------------------------------------------------------
+
+\begin{authors}
+%%%%
+%\name{所属番号(下記の\affに対応)}{著者名を記入},
+%%%%
+\name{1}{Yuri Lavinas},
+\name{1}{Claus Aranha},
+\name{2}{Marcelo Ladeira}
+%%%%
+\end{authors}
+
+
+
+\begin{affiliation}
+\aff{1}{University of Tsukuba, Japan},
+\aff{2}{University of Brasilia, Brazil}
+\end{affiliation}
+
+%---------------------------------------------------------------------------
+
+
+\endheader
+%--------------------------------------------------------------
+\end{center}
+]%
+
+%--------------------------------------------------------------
+% 英文タイトル
+%--------------------------------------------------------------
+
+\etitle{Verifying the Impact of the Tournament Selection on Genetic Algorithms}
+
+%--------------------------------------------------------------
+% 英語語著者名
+%--------------------------------------------------------------
+% ename{1}{***} : 所属１の氏名
+% ename{2}{***} : 所属２の氏名　のようにする．
+
+\ename{1}{Yuri Lavinas(yclavinas@gmail.com)}
+\ename{2}{Claus Aranha(caranha@cs.tsukuba.ac.jp)}
+\ename{2}{Marcelo Ladeira(mladeira@unb.br)}
+
+
+%--------------------------------------------------------------
+% 英語所属
+%--------------------------------------------------------------
+% eaff{1}{***} : 所属１
+% eaff{2}{***} : 所属２　のようにする．所属の引数は４まで.
+% ※日本語の所属と対応させること．
+
+
+\eaff{1}{%
+Department of xxx %
+bbb University%
 }
 
-%\institute{ 
-%  University of Brasilia, Computer Science Department \hspace{.1cm}
-%  \email{yclavinas@gmail.com} \and 
-%%  University of Tsukuba, Graduate School of SIE \hspace{.1cm}
-%%  \email{yexiucai@mma.cs.tsukuba.ac.jp} \and 
-%  University of Brasilia, Computer Science Department \hspace{.1cm}
-%  \email{mladeira@unb.br} \and
-%%  University of Tsukuba, Graduate School of SIE \hspace{.1cm}
-%%  \email{sakurai@cs.tsukuba.ac.jp} \and 
-%  University of Tsukuba, Graduate School of SIE \hspace{.1cm}
-%  \email{caranha@cs.tsukuba.ac.jp}}
-%\maketitle
+\eaff{2}{%
+Graduated School of yyy %
+bbb University%
+}
 
-\begin{abstract}
-\input{0_abstract.tex}
-\end{abstract}
+
+
+\vspace{3mm}
+
+\kanjiskip=.1zw plus 3pt minus 3pt
+\xkanjiskip=.1zw plus 3pt minus 3pt
+%---------------------------------------------------------------------------
+% 本文
+%---------------------------------------------------------------------------
+
+%\begin{abstract}
+	\input{0_abstract.tex}
+%\end{abstract}
 
 % Main file with the paper
 \input{1_intro.tex}
@@ -55,11 +121,11 @@
 %\input{3_proposed.tex}
 \input{4_experiment.tex}
 \input{5_results.tex}
-\input{6_discussion.tex}
+%\input{6_discussion.tex}
 \input{7_conclusion.tex}
 
-\subsubsection*{Acknowledgments.} 
 
 \bibliographystyle{splncs03}
 \bibliography{tournament}
+%------------------------------------------------------------------------------
 \end{document}

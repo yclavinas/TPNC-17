@@ -1,0 +1,65 @@
+%\documentclass{llncs}
+\documentclass{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+%\usepackage{natbib}
+\usepackage{xcolor,graphicx,url}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{lipsum}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+
+\begin{document}
+
+\title{Verifying the Impact of the Tournament Selection on Genetic Algorithms}
+
+\author{
+  Yuri Lavinas\inst{1} \and
+%  Xiucai Ye\inst{2} \and
+  Marcelo Ladeira\inst{3} \and \\ 
+%  Tetsuya Sakurai\inst{4} \and
+  Claus Aranha\inst{5}
+}
+
+%\institute{ 
+%  University of Brasilia, Computer Science Department \hspace{.1cm}
+%  \email{yclavinas@gmail.com} \and 
+%%  University of Tsukuba, Graduate School of SIE \hspace{.1cm}
+%%  \email{yexiucai@mma.cs.tsukuba.ac.jp} \and 
+%  University of Brasilia, Computer Science Department \hspace{.1cm}
+%  \email{mladeira@unb.br} \and
+%%  University of Tsukuba, Graduate School of SIE \hspace{.1cm}
+%%  \email{sakurai@cs.tsukuba.ac.jp} \and 
+%  University of Tsukuba, Graduate School of SIE \hspace{.1cm}
+%  \email{caranha@cs.tsukuba.ac.jp}}
+%\maketitle
+
+\begin{abstract}
+\input{0_abstract.tex}
+\end{abstract}
+
+% Main file with the paper
+\input{1_intro.tex}
+\input{2_background.tex} 
+%\input{3_proposed.tex}
+\input{4_experiment.tex}
+\input{5_results.tex}
+\input{6_discussion.tex}
+\input{7_conclusion.tex}
+
+\subsubsection*{Acknowledgments.} 
+
+\bibliographystyle{splncs03}
+\bibliography{tournament}
+\end{document}

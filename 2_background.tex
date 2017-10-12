@@ -7,13 +7,39 @@ In this work we want to analyse the impact of varying the tournament size. For t
 The selection scheme is intended to improve the avarage quality of the GA by giving individuals of higher quality a higher probabilty of composing the next generation~\cite{blickle1995mathematical}. It is also an important factor to the convergence quality of the GA and the goal of any selection scheme is to favor the proliferation of good individuals in the population of the GA~\cite{harik1999gambler}. 
 
 %TODO: its possible to better show the ideas here
-Goldberg and Deb~\cite{goldberg1991comparative} stated that there exists several selection schemes commonly used in GA, such as the rank selection, the roulette-whell selection and the tournament selection. They also declare that the complexity of the tournament size is o(n) and say that tournaments are often held with tournament size s = 2, although larger tournament sizes may be analyzed.
+Goldberg and Deb~\cite{goldberg1991comparative} stated that there exists several selection schemes commonly used in GA, such as the rank selection, the roulette-whell selection and the tournament selection. They also declare that the complexity of the tournament selection is o(n) and say that tournaments are often held with tournament size s = 2, although larger tournament sizes may be analyzed.
 
 \subsection{The Tournament Selection Procedure}\label{sec:background:tournament_selection} 
 
 To be able to understand the impact of the Tournament Selection and to be capable to analyse this selection scheme we not only need to describe how it is conducted, but also we need to study applications that used the Tournament Selection. Here we describe how it operates, and we show the studies next.
 
 Tournament selection is conducted as follows: choose some number, k, of individuals randomly from the population and copy the best individual from this group into an intermediate population, and repeat N times. 
+
+\begin{algorithm}\label{tournament_procedure}
+	\caption{Tournament Procedure}
+	\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+	\SetKw{return}{return}
+	\Input{individuals, k, tournsize}
+	\tiny	\begin{itemize}
+		\item individuals: A list of individuals to select from.\vspace{-3mm}
+		\item k: The number of individuals to select.\vspace{-3mm}
+		\item tournsize: The number of individuals participating in each tournament.\vspace{-3mm}
+	\end{itemize}
+	
+	\normalsize
+	
+	\Output{list of selected individuals}
+	\BlankLine
+		
+	selected = list()\\
+	\For{i = 1 to k}{
+		candidates = choose\_Random(individuals, tournsize)\\
+		selected[i] = max(candidates, by: fitness value)
+	}
+	\return selected
+\end{algorithm}
+
+
 
 %TODO: its possible to better show the ideas here
 Often tournaments are held only between two individuals (binary tournament) but a generalization is possible to an arbritrary group size k called tournament size~\cite{blickle1995mathematical, goldberg1991comparative}. A tournament selection, as any selection mechanism in GA, simply favors the selection of better individuals of a population to influence the next generation. 

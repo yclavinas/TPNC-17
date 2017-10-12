@@ -1,8 +1,13 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-Tournsize doesnt make any difference in quality
 
-Maybe then you should use this
+In this paper we proposed an experimental analysis of the impact of the tournament size on the BBOB benchmark functions. First, we verified that there is no mathematical or experimental study that backgrounds any possible choice of value for the tournament size. Then, we searched into the literature, and realized that, in most cases, the most common values for tournament size are 2 or 3, though these values were used as a popular principle. 
 
-Maybe use two because of CPU...
+Based on that, we projected our two experiments. In the first one, we analyzed a group of tournament size values, ranging from 2 to 24 and applied a simple GA, GA-BBOB, into the BBOB benchmark functions, given 10, 20 and 40 dimensions. The results showed that for any value of the tournament size did no impact was observed in improving the quality of the results for any functions in any dimension.
+
+Futher, we explored the fluctuation of the tournament size value trough the execution of the GA-BBOB, by starting with the value 2 and then varied it, ranging from 2 to 24 and applied on the GA-BBOB, with the BBOB benchmark functions, given only 40 dimensions. This time also, no significant result was discovered.
+
+We propose that more investigations need to be done, in order to truly understand the role of the tournament size value related to the quality of final results. For that, we suggest that another kind of fluctuation, a more elaborated one, should be explored. Also, we would like to understand if our results were mainly related with the GA-BBOB combination of parameters (crossover operator, mutation operator, selection operator, etc).
+
+Hence most of the works already used tournament sizes equal to 2 or 3, and based on the results obtained allied with the complexity of the tournament selection being $O(n)$, we continue to advise that values of 2 or 3 should continue to be used as first choice.
