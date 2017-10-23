@@ -65,10 +65,10 @@ Sawyerr et al found simliar results to the one achieved by Chuang et al. on thei
 \subsection{Experiments}
 We made two experiments aiming to verify the impact of different values for the tournament size. In the first experiment, we analyzed the relation between the tournament size and the performance on the BBOB benchmark functions. In the second experiment, we analyze the impact of fluctuating the values of the tournament size \textit{during} the execution.
 
-We used ANOVA to test whether any of the combinations shows a
-significant deviation in terms of tournament size values, represented as the
+We used the Friedman Test to determine whether any of the combinations shows a
+significant difference in the values given the tournament size values, represented as the
 quality of the result given functions and dimensions. In each of these tests, we set
-$\alpha = 0.05$.
+$\alpha = 0.05$. For this analysis, the dependent variable being the value obtained, the blocking variables are the functions and the treatment variable is the tournament size value.
 
 \subsubsection*{Fixed tournament size}
 
@@ -77,6 +77,6 @@ To analyze the impact of the tournament size into the GA in therms of quality of
 
 \subsubsection*{Fluctuating tournament size}
 
-To analyze the impact of fluctuating the tournament size \textit{during} the execution of the GA in therms of quality of result, the following experiments were performed. We start with the tournament size equal to 2, as many of the work cited on section~\ref{sec:background:tournament_size}. Then when half of the evaluations are completed, the tournament size is changed to another value, chosen from 2 to 25. These values were applied to the BBOB benchmark functions with 40 dimensions For each combination of BBOB benchmark functions, dimensions, and fluctuating tournament size we performed 40 repletions.
+To analyze the impact of fluctuating the tournament size \textit{during} the execution of the GA in therms of quality of result, the following experiments were performed. We start with the tournament size equal to 2, as many of the work cited on section~\ref{sec:background:tournament_size}. Then when half of the evaluations are completed, the tournament size is changed to another value, chosen from 2 to 25. These values were applied to the BBOB benchmark functions with 40 dimensions For each combination of BBOB benchmark functions, dimensions, and fluctuating tournament size we performed 40 repetitions.
 
 
