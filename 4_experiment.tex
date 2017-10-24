@@ -2,11 +2,12 @@
 
 \subsection{The Genetic Algorithm}\label{sec:proposed:ga}
 
-In this work, we implemented a simple real-valued Genetic Algorithm to explore the search space of the 24 noise free N dimension BBOB benchmark functions~\cite{hansen2010real}.
+To test the influence of the tournament size we implemented a simple real-valued Genetic Algorithm to explore the search space of the 24 noise free N dimension BBOB benchmark functions~\cite{hansen2010real}.
 
 \subsubsection*{Genome Representation and Evolutionary Tools.}
-Each individual is represented as real valued array, where each element is one input to a N dimension noise free benchmark BBOB function. Therefore, each individual of the GA has size of N real value elements. Each individual's values is set to the be into the interval [-4, 4], since the target functions are bounded by these values. It uses the Uniform crossover, elitism and Gaussian mutation as evolutionary operators. The relevant parameters were set as in the Table~\ref{relevant_par} and Table~\ref{gaussian_par}.
+Each solution is represented as real valued array, where each element is one input to a N dimension noise free benchmark BBOB function. Therefore, each solution of the GA has size of N real value elements. Each solution's values is set to the be into the interval [-4, 4], since the target functions are bounded by these values. It uses the Uniform crossover, elitism and Gaussian mutation as evolutionary operators. The relevant parameters were set as in the Table~\ref{relevant_par} and Table~\ref{gaussian_par}.
 
+\vspace{3mm}
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|l|l|}
@@ -45,25 +46,25 @@ The restart strategy concept is defined by Chuang et al. as: ``For each restart,
 
 The restart condition used in the GA is value of the standard deviation of the current population. If it is smaller that $10^{-12}$, then the restart condition is triggered. Therefore, when it is contemplated the algorithm population is reinitialized randomly, as it is in the first initialization. 
 
-In the GA, we consider information about the last run, by utilizing the Elitism strategy on the best individual prior to the restart. The maximum number of function evaluations chosen is ($4 * 10^5$) and the target precision chosen is ($10^{-8}$), values compatible with the ones in the previous work.
+In the GA, we consider information about the last run, by utilizing the Elitism strategy on the best solution prior to the restart. The maximum number of function evaluations chosen is ($4 * 10^5$) and the target precision chosen is ($10^{-8}$), values compatible with the ones in the previous work.
 
-\subsubsection*{Genetic Algorithms and Benchmarks Functions.}
-
-In 2009, Nicolau~\cite{nicolau2009application} proposed the first Genetic Algorithm on the BBOB-2009 noiseless testbed. It was a simple binary Genetic Algorithm and its results showed good results on separable functions, but poor performance is achieved on the other functions.
-
-In 2012, Chuang et al.~\cite{chuang2012black} presented the ``DBRCGA''. Their results showed that the DBRCGA performs with difficulty in getting a solution with the desired accuracy for high conditioning and multimodal functions within the specified maximum number of evaluations, the DBRCGA presents good performance in separable function and functions with low or moderate conditioning.
-
-In 2013, Holtschulte et al.~\cite{holtschulte2013benchmarking} evaluated two Genetic Algorithm on the BBOB-2013 noiseless testbed. Their results highlight the importance of carefully chosen genetic operators.
-
-Sawyerr et al found simliar results to the one achieved by Chuang et al. on their works in 2013~\cite{sawyerr2013benchmarking} and in 2015~\cite{sawyerr2015benchmarking}. Both the PRCGA and the RCGAu were tested on the BBOB-2013 noiseless testbed. They stated that both of them had difficulties to achieve solutions with the desired accuracy for high conditioning and multimodal functions. They also state that real value GA do not efficiently solve highly conditioned problems and studies have currently been carried out to find out why~\cite{sawyerr2015benchmarking}.
-
+%\subsubsection*{Genetic Algorithms and Benchmarks Functions.}
+%
+%In 2009, Nicolau~\cite{nicolau2009application} proposed the first Genetic Algorithm on the BBOB-2009 noiseless testbed. It was a simple binary Genetic Algorithm and its results showed good results on separable functions, but poor performance is achieved on the other functions.
+%
+%In 2012, Chuang et al.~\cite{chuang2012black} presented the ``DBRCGA''. Their results showed that the DBRCGA performs with difficulty in getting a solution with the desired accuracy for high conditioning and multimodal functions within the specified maximum number of evaluations, the DBRCGA presents good performance in separable function and functions with low or moderate conditioning.
+%
+%In 2013, Holtschulte et al.~\cite{holtschulte2013benchmarking} evaluated two Genetic Algorithm on the BBOB-2013 noiseless testbed. Their results highlight the importance of carefully chosen genetic operators.
+%
+%Sawyerr et al found simliar results to the one achieved by Chuang et al. on their works in 2013~\cite{sawyerr2013benchmarking} and in 2015~\cite{sawyerr2015benchmarking}. Both the PRCGA and the RCGAu were tested on the BBOB-2013 noiseless testbed. They stated that both of them had difficulties to achieve solutions with the desired accuracy for high conditioning and multimodal functions. They also state that real value GA do not efficiently solve highly conditioned problems and studies have currently been carried out to find out why~\cite{sawyerr2015benchmarking}.
+%
 
 
 
 \label{sec:experiment}
 
 \subsection{Experiments}
-We made two experiments aiming to verify the impact of different values for the tournament size. In the first experiment, we analyzed the relation between the tournament size and the performance on the BBOB benchmark functions. In the second experiment, we analyze the impact of fluctuating the values of the tournament size \textit{during} the execution.
+We made two experiments aiming to verify the impact of different values for the tournament size. In the first experiment, we analyzed the relation between the tournament size and the performance on the BBOB benchmark functions. In the second experiment, we analyze the impact of changing the values of the tournament size \textit{during} the execution.
 
 We used the Friedman Test to determine whether any of the combinations shows a
 significant difference in the values given the tournament size values, represented as the
@@ -75,8 +76,8 @@ $\alpha = 0.05$. For this analysis, the dependent variable being the value obtai
 To analyze the impact of the tournament size into the GA in therms of quality of result, the following experiments were performed. First we analyse different values for the tournament size applied to the BBOB benchmark functions with 10, 20 and 40 dimensions. The tournament sizes were select, arbitrarily, from 2 to 25. For each combination of BBOB benchmark functions, dimensions, and tournament size we performed 40 repetitions.
 
 
-\subsubsection*{Fluctuating tournament size}
+\subsubsection*{Generation-dependent tournament size}
 
-To analyze the impact of fluctuating the tournament size \textit{during} the execution of the GA in therms of quality of result, the following experiments were performed. We start with the tournament size equal to 2, as many of the work cited on section~\ref{sec:background:tournament_size}. Then when half of the evaluations are completed, the tournament size is changed to another value, chosen from 2 to 25. These values were applied to the BBOB benchmark functions with 40 dimensions For each combination of BBOB benchmark functions, dimensions, and fluctuating tournament size we performed 40 repetitions.
+To analyze the impact of chaging the tournament size \textit{during} the execution of the GA in therms of quality of result, the following experiments were performed. We start with the tournament size equal to 2, as many of the work cited on section~\ref{sec:background:tournament_size}. Then when half of the evaluations are completed, the tournament size is changed to another value, chosen from 2 to 25. These values were applied to the BBOB benchmark functions with 40 dimensions. For each combination of BBOB benchmark functions, dimensions, and final tournament size we performed 40 repetitions.
 
 

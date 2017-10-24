@@ -2,14 +2,10 @@
 \label{sec:conclusion}
 
 
-In this paper we proposed an experimental analysis of the impact of the tournament size on the BBOB benchmark functions. First, we verified that there is no mathematical or experimental study that backgrounds any possible choice of value for the tournament size. Then, we searched into the literature, and realized that, in most cases, the most common values for tournament size are 2 or 3, though these values were used as a popular principle. 
-
+We proposed an experimental analysis of the impact of the tournament size on the BBOB benchmark functions. We verified that there is little mathematical or experimental study that backgrounds any possible choice of value for the tournament size. Usually, the tournament size is chosen to be 2 or 3, based on ``previous results''.
  
  
-Based on that, we projected our two experiments. In the first one, we analyzed a group of tournament size values, ranging from 2 to 25 and applied a simple GA into the BBOB benchmark functions, given 10, 20 and 40 dimensions. The results showed that for any value of the tournament size did no impact was observed in improving the quality of the results for any functions in any dimension.
+We projected two experiments. We analyzed a group of tournament size values and we also explored the changing of the tournament size value trough the execution of the GA. No significant result was discovered.
 
-Further, we explored the fluctuation of the tournament size value trough the execution of the GA, by starting with the value 2 and then varied it, ranging from 2 to 25 and applied on the GA-BBOB, with the BBOB benchmark functions, given only 40 dimensions. This time also, no significant result was discovered.
+We are aware that our work is limited to few tournament size values. Also, we understand that the other parameters may have some influence in the results. We know that there is much more that could be done in this field of study, therefore we propose that more investigations need to be done, in order to truly understand the role of the tournament size value related to the quality of final results. For that, we suggest that another kind of adaptative algorithm should be explored. Also, we would like to explore if our results were mainly related with the GA combination of parameters (crossover operator, mutation operator, selection operator, etc).
 
-We understand that there is much more that could be done in this field of study, therefore we propose that more investigations need to be done, in order to truly understand the role of the tournament size value related to the quality of final results. For that, we suggest that another kind of fluctuation, a more elaborated one, should be explored. Also, we would like to understand if our results were mainly related with the GA combination of parameters (crossover operator, mutation operator, selection operator, etc).
-
-Hence most of the works already used tournament sizes equal to 2 or 3, and based on the results obtained allied with the complexity of the tournament selection being $O(n)$, we continue to advise that values of 2 or 3 should continue to be used as first choice.
