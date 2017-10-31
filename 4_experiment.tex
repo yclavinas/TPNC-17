@@ -44,7 +44,7 @@ Chuang et al.~\cite{chuang2012black}, proposed a Genetic Algorithm specific to r
 
 The restart strategy concept is defined by Chuang et al. as: ``For each restart, the initial population  is uniformly and randomly sampled within the search space. Whenever the restart condition is met, the algorithm will be reinitialized without using any information about the last test run. This process is iterated until the stopping criteria are met, i.e., maximum number of function evaluations has been reached, or the function value is less than the target precision.''
 
-The restart condition used in the GA is value of the standard deviation of the current population. If it is smaller that $10^{-12}$, then the restart condition is triggered. Therefore, when it is contemplated the algorithm population is reinitialized randomly, as it is in the first initialization. 
+The restart condition used in the GA is value of the standard deviation of the current population. If it is smaller that $10^{-12}$, then the restart condition is triggered. In this case the algorithm population is reinitialized randomly, as it is in the first initialization. 
 
 In the GA, we consider information about the last run, by utilizing the Elitism strategy on the best solution prior to the restart. The maximum number of function evaluations chosen is ($4 * 10^5$) and the target precision chosen is ($10^{-8}$), values compatible with the ones in the previous work.
 
@@ -66,18 +66,15 @@ In the GA, we consider information about the last run, by utilizing the Elitism 
 \subsection{Experiments}
 We made two experiments aiming to verify the impact of different values for the tournament size. In the first experiment, we analyzed the relation between the tournament size and the performance on the BBOB benchmark functions. In the second experiment, we analyze the impact of changing the values of the tournament size \textit{during} the execution.
 
-We used the Friedman Test to determine whether any of the combinations shows a
-significant difference in the values given the tournament size values, represented as the
-quality of the result given functions and dimensions. In each of these tests, we set
-$\alpha = 0.05$. For this analysis, the dependent variable being the value obtained, the blocking variables are the functions and the treatment variable is the tournament size value.
+We used the Friedman Test to determine whether any of the for the tournament size show a significant difference in the average performance. In each of these tests, we set $\alpha = 0.05$. For this analysis, the dependent variable being the average performance, the blocking variable is the BBOB function number and the treatment variable is the tournament size value.
 
 \subsubsection*{Fixed tournament size}
 
-To analyze the impact of the tournament size into the GA in therms of quality of result, the following experiments were performed. First we analyse different values for the tournament size applied to the BBOB benchmark functions with 10, 20 and 40 dimensions. The tournament sizes were select, arbitrarily, from 2 to 25. For each combination of BBOB benchmark functions, dimensions, and tournament size we performed 40 repetitions.
+To analyze the impact of the tournament size into the GA in terms of quality of result, the following experiments were performed. First we analyze different values for the tournament size applied to the BBOB benchmark functions with 10, 20 and 40 dimensions. The tournament sizes were select, arbitrarily, from 2 to 25. For each combination of BBOB benchmark function, dimension, and tournament size we performed 40 repetitions and used the mean final result as the performance for that combination.
 
-
-\subsubsection*{Generation-dependent tournament size}
-
-To analyze the impact of chaging the tournament size \textit{during} the execution of the GA in therms of quality of result, the following experiments were performed. We start with the tournament size equal to 2, as many of the work cited on section~\ref{sec:background:tournament_size}. Then when half of the evaluations are completed, the tournament size is changed to another value, chosen from 2 to 25. These values were applied to the BBOB benchmark functions with 40 dimensions. For each combination of BBOB benchmark functions, dimensions, and final tournament size we performed 40 repetitions.
-
-
+%
+%\subsubsection*{Generation-dependent tournament size}
+%
+%To analyze the impact of chaging the tournament size \textit{during} the execution of the GA in therms of quality of result, the following experiments were performed. We start with the tournament size equal to 2, as many of the work cited on section~\ref{sec:background:tournament_size}. Then when half of the evaluations are completed, the tournament size is changed to another value, chosen from 2 to 25. These values were applied to the BBOB benchmark functions with 40 dimensions. For each combination of BBOB benchmark functions, dimensions, and final tournament size we performed 40 repetitions.
+%
+%

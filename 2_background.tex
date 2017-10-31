@@ -9,7 +9,7 @@ Goldberg and Deb~\cite{goldberg1991comparative} stated that there exists several
 
 Tournament selection is translation and scaling invariant~\cite{maza1993analysis}. That means that the behavior of the selection method is not affect by the scale of the fitness values~\cite{back2000evolutionary}.
 
-Tournament selection is conducted as: choose some number of solutions randomly from the population and select the best solution from this group as a parent for the crossover operator. Repeat this operation for each parent necessary.
+Tournament selection is conducted as: choose a number $K$ of solutions randomly from the population and select the best solution from this group as a parent for the crossover operator. Repeat this operation for each parent necessary. This $K$ is the tournament size parameter that we investigate in this paper.
 %
 %
 %\begin{algorithm}
@@ -47,7 +47,7 @@ Tournament selection is conducted as: choose some number of solutions randomly f
 
 Holtschulte and Moses, in~\cite{holtschulte2013benchmarking} used rank selection in their GA implementation and applied it to the BBOB functions. They declared that rank selection should be replaced by an elitism selection scheme to improve the performance of their GA implementation by spreading of high quality solutions through the population. 
 
-One of these elitist selection scheme is the fitness-based roulette-wheel. However, it has been shown to lead to premature convergence~\cite{baker1987reducing}. Nicolau, in~\cite{nicolau2009application} uses the tournament selection in his GA aiming to solve the BBOB functions. He declares ``for harder problem domains, such as the ones on the BBOB-Benchmark suite, the tournament selection scheme is more appropriate.''.
+One of these elitist selection scheme is the fitness-based roulette-wheel. However, it has been shown to lead to premature convergence~\cite{baker1987reducing}. Nicolau, ~\cite{nicolau2009application} uses the tournament selection in his GA aiming to solve the BBOB functions. He declares ``for harder problem domains, such as the ones on the BBOB-Benchmark suite, the tournament selection scheme is more appropriate.''.
 
 Then, in this work we chose to analyze the tournament selection behavior in the BBOB functions.
 
@@ -72,7 +72,7 @@ Agrawal~\cite{agrawal1995simulated}, in 1995, implemented real-coded GA with tou
 
 In 1999, Tsutsui et al.~\cite{tsutsui1999multi} proposed a simplex crossover (SPX), a multi-parent recombination operator for real-coded genetic algorithms. For their experiments, they used a real-coded GA with tournament selection with size 2 and showed that ``SPX works well on functions having multi modality and/or epistasis with a medium number of parents: 3-parent on a low dimensional function or 4 parents on high dimensional functions.''. 
 
-Later, in 2000, Deb~\cite{deb2000efficient}, implemented a binary GA and a real-coded GA, with tournament size 2. He aimed to devise a penalty function approach that does require any penalty parameter. Because all of their search spaces are defined in the real space, the real-coded GA was more suited in finding feasible solutions, but in all cases, this approach `` have a niche over classical methods to handle constraints''.
+Later, in 2000, Deb~\cite{deb2000efficient}, implemented a binary GA and a real-coded GA, with tournament size 2. He aimed to devise a penalty function approach that does require any penalty parameter. Because all of their search spaces are defined in the real space, the real-coded GA was more suited in finding feasible solutions, but in all cases, this approach `` [has] a niche over classical methods to handle constraints''.
 
 
 In 2001, Beyer et al.~\cite{beyer2001self}, analyzed the results of using the simulated binary crossover (SBX), the fuzzy recombination operator and the blend crossover (BLX), all with no mutation and tournament size 2 in a real-coded GA. The results indicated that those crossovers exhibit similar performance and linear convergence order.
